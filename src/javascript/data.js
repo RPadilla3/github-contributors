@@ -6,18 +6,18 @@
 
 
       /**
-       * @param {String}
+       * @param {String} text query search of Repos
+       * @param {String} token User token required for search
        * @return {Promise} [description]
        */
-      function searchRepos(text) {
-        var userToken = $('#api-key').val();
+      function searchRepos(text, token) {
 
         $.ajax({
           url: 'https://api.github.com/search/repositories?q=',
           method: 'GET',
           dataType: 'json',
           headers: {
-            'Authorization': 'token' + userToken,
+            'Authorization': 'token: ' + token,
             'content-type': 'application/json'
 
           }

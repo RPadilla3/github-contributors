@@ -6,20 +6,18 @@
       $('#search')
         .on('submit', function repos(event){
           event.preventDefault();
+          var userToken = $('#api-key').val();
 
-          var api = $('#api-key').val();
-          console.log(api);
-
-          var search = $('#query').val();
-          console.log(search);
-          // window.contribs.searchRepos('jhgjhghj')
-          //   .done(function handleSuccess(data) {
-
-
-            // })
+          window.contribs.searchRepos('rofifi', userToken)
+            .done(function handleSuccess(data) {
+              console.log('success', data);
+            })
+            .fail(function handleSuccess(xhr) {
+              console.log('failure', xhr);
+            })
         });
 
-      // };
+
 
 
 }());
