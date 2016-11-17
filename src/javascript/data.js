@@ -6,23 +6,22 @@
 
 
       /**
-       * @param {String} text query search of Repos
+       * @param {String} query search of Repos
        * @param {String} token User token required for search
        * @return {Promise} [description]
        */
-      function searchRepos(text, token) {
+      function searchRepos(query, token) {
 
-        $.ajax({
-          url: 'https://api.github.com/search/repositories?q=',
+       return $.ajax({
+          url: 'https://api.github.com/search/repositories?q=' + query,
           method: 'GET',
           dataType: 'json',
           headers: {
-            'Authorization': 'token: ' + token,
-            'content-type': 'application/json'
-
+            authorization: 'token ' + token,
           }
         });
-      }
+
+      };
 
 
 
