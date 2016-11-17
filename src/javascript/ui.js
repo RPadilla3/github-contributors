@@ -3,13 +3,23 @@
 
     window.contribs = window.contribs || {};
 
-     window.contribs.getRepos = function getRepos() {
-      $('.search')
-        .on('submit', function repos(){
+      $('#search')
+        .on('submit', function repos(event){
+          event.preventDefault();
 
-        }
+          var api = $('#api-key').val();
+          console.log(api);
 
-      };
+          var search = $('#query').val();
+          console.log(search);
+          // window.contribs.searchRepos('jhgjhghj')
+          //   .done(function handleSuccess(data) {
+
+
+            // })
+        });
+
+      // };
 
 
 }());
