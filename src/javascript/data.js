@@ -3,6 +3,7 @@
 
     window.contribs = window.contribs || {};
     window.contribs.searchRepos = searchRepos;
+    window.contribs.getRepo = getRepo;
 
 
       /**
@@ -21,7 +22,18 @@
           }
         });
 
-      };
+      }
+
+      function getRepo(token, url) {
+        return $.ajax({
+          url: url.split('{')[0],
+          method: 'GET',
+          dataType: 'json',
+          headers: {
+            authorization: 'token ' + token
+          }
+        });
+      }
 
 
 
