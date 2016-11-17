@@ -17,6 +17,11 @@
 
             .done(function handleSuccess(data) {
                     console.log('success', data);
+
+                    var randomRepo = data.items;
+
+                    var randomChoice = randomRepo[Math.ceil(Math.random() * randomRepo.length)];
+                    console.log(randomChoice);
                 })
                 .fail(function handleSuccess(xhr) {
                     console.log('failure', xhr);
