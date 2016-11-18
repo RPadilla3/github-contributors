@@ -4,6 +4,8 @@
     window.contribs = window.contribs || {};
 
 
+
+
     $('#search')
         .on('submit', function repos(event) {
             event.preventDefault();
@@ -23,14 +25,30 @@
                     return p;
                 })
                 .then(function handlePromise(data) {
-                  console.log(data);
                     var avatar = data[0].author.avatar_url;
                     var author = data[0].commit.author.name;
 
-                    localStorage.setItem('avatar', avatar);
+                    var stored = JSON.parse(localStorage.getItem('users'));
+                    if (stored === null) {
+                      stored = [];
+                    }
+
+                    var storeUser = {
+                        avatar,
+                        author
+                    };
+                    stored.push(storeUser)
+
+                    localStorage.setItem('users', JSON.stringify(stored));
+
+                    console.log(stored);
+
+
+                    console.log(storeUser);
+
                     $('#contributors ul')
                         .append(
-                            '<li><img src="' + avatar + '">' + '   ' + author + '</li>'
+                            '<li><img src="' + avatar + '">' + ' ' + author + '</li>'
                         );
 
                 })
