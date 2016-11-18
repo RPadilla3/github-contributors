@@ -9,7 +9,7 @@
       /**
        * @param {String} query search of Repos
        * @param {String} token User token required for search
-       * @return {Promise} 
+       * @return {Promise}
        */
       function searchRepos(query, token) {
 
@@ -24,7 +24,13 @@
 
       }
 
+      /**
+       * @param  {String} token User token required for search
+       * @param  {String} url   url with user sent query to look for a commit
+       * @return {Promise}
+       */
       function getCommit(token, url) {
+
         return $.ajax({
           url: url.split('{')[0],
           method: 'GET',
