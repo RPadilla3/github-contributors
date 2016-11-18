@@ -1,0 +1,25 @@
+{
+  "name": "github-contributors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RPadilla3/github-contributors.git"
+  },
+  "author": "Rodolfo Padilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RPadilla3/github-contributors/issues"
+  },
+  "homepage": "https://github.com/RPadilla3/github-contributors#readme"
+}
