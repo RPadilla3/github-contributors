@@ -24,7 +24,9 @@
 
                     return p;
                 })
-                .then(function handlegetRepo(data) {
+                .then(function handlegetCommit(data) {
+                    var randomCommit = data.author;
+                    console.log(randomCommit);
                   console.log('success', data);
                 })
                 .fail(function handleSuccess(xhr) {

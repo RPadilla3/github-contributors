@@ -3,7 +3,7 @@
 
     window.contribs = window.contribs || {};
     window.contribs.searchRepos = searchRepos;
-    window.contribs.getRepo = getRepo;
+    window.contribs.getCommit = getCommit;
 
 
       /**
@@ -24,7 +24,7 @@
 
       }
 
-      function getRepo(token, url) {
+      function getCommit(token, url) {
         return $.ajax({
           url: url.split('{')[0],
           method: 'GET',
