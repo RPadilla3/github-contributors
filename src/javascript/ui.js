@@ -20,7 +20,7 @@
                     var randomChoice = randomRepo[Math.ceil(Math.random() * randomRepo.length)];
                     var url = randomChoice.commits_url;
 
-                    var p = window.contribs.getRepo(token, url);
+                    var p = window.contribs.getCommit(token, url);
 
                     return p;
                 })
