@@ -2,7 +2,7 @@
 
   Basic Website that will require future developers to install jQuery, either
   through CDN or through npm install with a package.json.
-  gruntfile.js optional but beneficial for testing and for linting.
+  [gruntfile.js] optional but beneficial for testing and for linting.
 
   GitHub Contributors is a site that requires a github user Authentication token
   for validation to continue without any issues with githubs API. This site is
