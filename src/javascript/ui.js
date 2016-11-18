@@ -19,20 +19,24 @@
                     var randomRepo = data.items;
                     var randomChoice = randomRepo[Math.ceil(Math.random() * randomRepo.length)];
                     var url = randomChoice.commits_url;
-
+                    var avatar = data[0].author.avatar_url;
                     var p = window.contribs.getCommit(token, url);
 
                     return p;
                 })
-                .then(function handlegetCommit(data) {
-                    var randomCommit = data.author;
-                    console.log(randomCommit);
+                .then(function handlePromise(data) {
                   console.log('success', data);
+                  $('#contributors ul')
+                    .append(
+                      '<li><img src = ></li>'
+                    )
+
                 })
                 .fail(function handleSuccess(xhr) {
                     console.log('failure', xhr);
                 });
         });
+
 
 
 

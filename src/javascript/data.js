@@ -9,7 +9,7 @@
       /**
        * @param {String} query search of Repos
        * @param {String} token User token required for search
-       * @return {Promise} [description]
+       * @return {Promise} 
        */
       function searchRepos(query, token) {
 
