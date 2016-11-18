@@ -19,16 +19,17 @@
                     var randomRepo = data.items;
                     var randomChoice = randomRepo[Math.ceil(Math.random() * randomRepo.length)];
                     var url = randomChoice.commits_url;
-                    var avatar = data[0].author.avatar_url;
                     var p = window.contribs.getCommit(token, url);
 
                     return p;
                 })
                 .then(function handlePromise(data) {
                   console.log('success', data);
+                  var avatar = data[0].author.avatar_url;
+                  console.log(avatar);
                   $('#contributors ul')
                     .append(
-                      '<li><img src = ></li>'
+                      '<li><img src="' + avatar + '"></li>'
                     )
 
                 })
