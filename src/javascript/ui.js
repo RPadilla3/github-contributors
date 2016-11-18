@@ -25,11 +25,13 @@
                 .then(function handlePromise(data) {
                   console.log(data);
                     var avatar = data[0].author.avatar_url;
-                    var author = data[0].commit.author.name
+                    var author = data[0].commit.author.name;
+
+                    localStorage.setItem('avatar', avatar);
                     $('#contributors ul')
                         .append(
-                            '<li><img src="' + avatar + '">' + '  ' + author + '</li>'
-                        )
+                            '<li><img src="' + avatar + '">' + '   ' + author + '</li>'
+                        );
 
                 })
                 .fail(function handleSuccess(xhr) {
