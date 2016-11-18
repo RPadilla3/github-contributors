@@ -14,7 +14,6 @@
             window.contribs.searchRepos(query, token)
 
             .then(function handleSuccess(data) {
-                    console.log('success', data);
 
                     var randomRepo = data.items;
                     var randomChoice = randomRepo[Math.ceil(Math.random() * randomRepo.length)];
@@ -24,13 +23,13 @@
                     return p;
                 })
                 .then(function handlePromise(data) {
-                  console.log('success', data);
-                  var avatar = data[0].author.avatar_url;
-                  console.log(avatar);
-                  $('#contributors ul')
-                    .append(
-                      '<li><img src="' + avatar + '"></li>'
-                    )
+                  console.log(data);
+                    var avatar = data[0].author.avatar_url;
+                    var author = data[0].commit.author.name
+                    $('#contributors ul')
+                        .append(
+                            '<li><img src="' + avatar + '">' + '  ' + author + '</li>'
+                        )
 
                 })
                 .fail(function handleSuccess(xhr) {
