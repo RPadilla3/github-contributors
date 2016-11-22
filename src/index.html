@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <title>Random GitHub Contributor</title>
 
-        <meta name='description' content='Finds a random github contributor.'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+<head>
+    <meta charset='utf-8'>
+    <title>Random GitHub Contributor</title>
 
-        <style>
-        #contributors img { width: 2em; }
-        </style>
-    </head>
-    <body>
-        <h1>Random GitHub Contributor</h1>
+    <meta name='description' content='Finds a random github contributor.'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <style>
+        #contributors img {
+            width: 2em;
+        }
+    </style>
+</head>
 
-        <form id='search'>
-            <fieldset>
-                <input type='text' id='api-key' placeholder='API key' class='api' required>
-                <input type='text' id='query' placeholder='Search query...' class='query' required>
-                <input type='submit' value='Find Contributor'>
-                <button class='clear'>Clear Data</button>
-            </fieldset>
-        </form>
+<body>
+    <h1>Random GitHub Contributor</h1>
 
-        <section id='contributors'>
-            <ul></ul>
-        </section>
+    <form id='search'>
+        <fieldset>
+            <input type='text' id='api-key' placeholder='API key' class='api' required>
+            <input type='text' id='query' placeholder='Search query...' class='query' required>
+            <input type='submit' value='Find Contributor'>
+            <button class='clear'>Clear Data</button>
+        </fieldset>
+    </form>
 
-        <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
-        <script src='javascript/data.js'></script>
-        <script src='javascript/ui.js'></script>
-    </body>
+    <section id='contributors'>
+        <ul></ul>
+    </section>
+
+    <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <script src='javascript/data.js'></script>
+    <script src='javascript/ui.js'></script>
+</body>
+
 </html>
