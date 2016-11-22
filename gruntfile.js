@@ -48,12 +48,35 @@ module.exports = function(grunt) {
         }
       },
 
+      connect: {
+        testing: {
+          options: {
+            port: 8000,
+            base: '.'
+          }
+        }
+      },
+
+      mocha: {
+        alltests: {
+          options: {
+            url: [
+         'https://localhost:8000/test/thoughterTester.html'
+        ]
+      }
+    }
+  }
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-mocha');
 
-    grunt.registerTask('default', ['jshint', 'copy', 'concat']);
+
+    grunt.registerTask('test', ['jshint', 'connect', 'mocha']);
+    grunt.registerTask('default', ['jshint', 'test', 'copy', 'concat']);
 
 };
