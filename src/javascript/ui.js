@@ -3,9 +3,6 @@
 
     window.contribs = window.contribs || {};
 
-
-
-
     $('#search')
         .on('submit', function repos(event) {
             event.preventDefault();
@@ -34,10 +31,11 @@
                     }
 
                     var storeUser = {
-                        avatar,
-                        author
+                        url: avatar,
+                        name: author
                     };
-                    stored.push(storeUser)
+
+                    stored.push(storeUser);
 
                     localStorage.setItem('users', JSON.stringify(stored));
 
