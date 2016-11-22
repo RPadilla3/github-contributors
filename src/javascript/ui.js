@@ -5,7 +5,7 @@
     var stored = [];
     console.log(stored);
 
-    var storedUser = JSON.parse(localStorage.getItem('users'))
+    var storedUser = JSON.parse(localStorage.getItem('users'));
     console.log(storedUser);
 
     storedUser.forEach(function(item) {
@@ -13,7 +13,7 @@
             .append(
                 '<li><img src="' + item.url + '">' + ' ' + item.name + '</li>'
             );
-    })
+    });
 
     $('#search')
         .on('submit', function repos(event) {
@@ -36,11 +36,6 @@
                 .then(function handlePromise(data) {
                     var avatar = data[0].author.avatar_url;
                     var author = data[0].commit.author.name;
-
-                    var store = JSON.parse(localStorage.getItem('users'));
-                    // if (stored === null) {
-                    //     stored = [];
-                    // }
 
                     var storeUser = {
                         url: avatar,
