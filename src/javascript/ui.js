@@ -2,10 +2,9 @@
     'use strict';
 
     window.contribs = window.contribs || {};
-    var stored = [];
-    console.log(stored);
 
-    var storedUser = JSON.parse(localStorage.getItem('users'));
+    var users = [];
+    var storedUser = JSON.parse(localStorage.getItem('users')) || [];
     console.log(storedUser);
 
     storedUser.forEach(function(item) {
@@ -43,9 +42,9 @@
                     };
 
                     var store = JSON.parse(localStorage.getItem('users'));
-                      if (storing === null) {
-                       storing = [];
-                     }
+                    //   if (storing === null) {
+                    //    storing = [];
+                    //  }
 
                     stored.push(storeUser);
                     console.log(stored);
