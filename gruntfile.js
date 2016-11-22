@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       concat: {
         javascript: {
           src: ['src/javascript/**/*.js'],
-          dest: 'build/js/thought.js'
+          dest: 'build/js/github.js'
         }
       },
 
