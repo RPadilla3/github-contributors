@@ -83,11 +83,6 @@
                     var avatar = data[0].author.avatar_url;
                     var author = data[0].commit.author.name;
 
-                    // var store = JSON.parse(localStorage.getItem('users'));
-                    // if (stored === null) {
-                    //     stored = [];
-                    // }
-
                     var storeUser = {
                         url: avatar,
                         name: author
