@@ -2,6 +2,18 @@
     'use strict';
 
     window.contribs = window.contribs || {};
+    var stored = [];
+    console.log(stored);
+
+    var storedUser = JSON.parse(localStorage.getItem('users'))
+    console.log(storedUser);
+
+    storedUser.forEach(function(item) {
+        $('#contributors ul')
+            .append(
+                '<li><img src="' + item.url + '">' + ' ' + item.name + '</li>'
+            );
+    })
 
     $('#search')
         .on('submit', function repos(event) {
@@ -25,10 +37,10 @@
                     var avatar = data[0].author.avatar_url;
                     var author = data[0].commit.author.name;
 
-                    var stored = JSON.parse(localStorage.getItem('users'));
-                    if (stored === null) {
-                      stored = [];
-                    }
+                    var store = JSON.parse(localStorage.getItem('users'));
+                    // if (stored === null) {
+                    //     stored = [];
+                    // }
 
                     var storeUser = {
                         url: avatar,
@@ -36,13 +48,9 @@
                     };
 
                     stored.push(storeUser);
-
-                    localStorage.setItem('users', JSON.stringify(stored));
-
                     console.log(stored);
 
-
-                    console.log(storeUser);
+                    localStorage.setItem('users', JSON.stringify(stored));
 
                     $('#contributors ul')
                         .append(
