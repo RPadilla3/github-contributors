@@ -43,8 +43,8 @@
                     };
 
                     var store = JSON.parse(localStorage.getItem('users'));
-                      if (stored === null) {
-                       stored = [];
+                      if (storing === null) {
+                       storing = [];
                      }
 
                     stored.push(storeUser);
