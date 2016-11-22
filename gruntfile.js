@@ -41,11 +41,19 @@ module.exports = function(grunt) {
 
       },
 
+      concat: {
+        javascript: {
+          src: ['src/javascript/**/*.js'],
+          dest: 'build/js/thought.js'
+        }
+      },
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['jshint', 'copy']);
+    grunt.registerTask('default', ['jshint', 'copy', 'concat']);
 
 };
