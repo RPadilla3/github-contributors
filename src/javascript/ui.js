@@ -42,6 +42,11 @@
                         name: author
                     };
 
+                    var store = JSON.parse(localStorage.getItem('users'));
+                      if (stored === null) {
+                       stored = [];
+                     }
+
                     stored.push(storeUser);
                     console.log(stored);
 
