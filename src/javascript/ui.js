@@ -41,15 +41,10 @@
                         name: author
                     };
 
-                    var store = JSON.parse(localStorage.getItem('users'));
-                    //   if (storing === null) {
-                    //    storing = [];
-                    //  }
+                    users.push(storeUser);
+                    console.log(users);
 
-                    stored.push(storeUser);
-                    console.log(stored);
-
-                    localStorage.setItem('users', JSON.stringify(stored));
+                    localStorage.setItem('users', JSON.stringify(users));
 
                     $('#contributors ul')
                         .append(
